@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Bcrypt Auth</title>
+  <link rel="stylesheet" href="/home.css">
+  <link rel="stylesheet" href="/navbar.css">
+
+</head>
+<body>
+<nav>
+  <ul class="navbar-list">
+    <li><a class="navbar-link" th:href="@{/}">Bcrypt Auth </a></li>
+    <li><a class="navbar-link" th:href="@{/login}">Login</a></li>
+    <li><a class="navbar-link" th:href="@{/posts}">Posts only loged-in users </a></li>
+  </ul>
+</nav>
+<div class="home-container">
+  <h1> Authentication with Bcrypt Spring MVC App</h1>
+
+  <h2>Available Routes:</h2>
+  <ul><li><a href="/posts">/posts</a> <ul> <li> <b> Avilable for only loged in users </b></li>
+     <li> Which returns a html page with a Form to add <b>any Post you want.</b> </li> </ul>
+  </ul>
+</div>
+</body>
+</html>

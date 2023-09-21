@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Posts</title>
+</head>
+<body>
+<h1>Posts</h1>
+<div th:text="'username ' + ${username}"> </div>
+<form action="/logout" method="POST">
+  <input type="submit" value="Log Out">
+</form>
+
+<form action="/add-post" method="post">
+
+  <legend>Add a post </legend>
+  <label for="postText">post Text</label>
+  <input type="textarea"  rows = "5" cols = "60" name="postText" id="postText">
+
+
+  <input type="submit" value="Add post">
+</form>
+
+
+<div class="song-card-container">
+  <div th:each="post : ${posts}" >
+    <div >
+      <h3 th:text="${post.postBySiteUser.username}"></h3>
+      <h4> <span th:text="${post.postText}"></span></h4>
+    </div>
+  </div>
+</div>
+
+</body>
+
+</html>
